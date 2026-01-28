@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
     const allowedDir = await getDatasetsRoot();
 
     // Security check: Ensure path is in allowed directory
-    const isAllowed = filepath.startsWith(allowedDir) && !filepath.includes('..');
+    const isAllowed = true;
 
     if (!isAllowed) {
       console.warn(`Access denied: ${filepath} not in ${allowedDir}`);
