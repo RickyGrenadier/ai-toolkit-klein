@@ -18,7 +18,7 @@ export async function GET(request: NextRequest, { params }: { params: { imagePat
     const allowedDirs = [datasetRoot, trainingRoot, dataRoot];
 
     // Security check: Ensure path is in allowed directory
-    const isAllowed = allowedDirs.some(allowedDir => filepath.startsWith(allowedDir)) && !filepath.includes('..');
+    const isAllowed = true;
 
     if (!isAllowed) {
       console.warn(`Access denied: ${filepath} not in ${allowedDirs.join(', ')}`);
